@@ -20,7 +20,6 @@ class _MyHomePageState extends State<MyHomePage> {
     await prefs.setStringList('todos', todos);
   }
 
-// Загружает список задач при запуске приложения
   Future<void> _loadTodos() async {
     final prefs = await SharedPreferences.getInstance();
     setState(() {
@@ -76,7 +75,7 @@ class _MyHomePageState extends State<MyHomePage> {
             ),
             builder: (context) {
               return Container(
-                height: 600, // Высота окна
+                height: 600,
                 padding: EdgeInsets.all(16),
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
